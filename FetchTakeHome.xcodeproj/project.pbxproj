@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		03EAA9932CBEEE3A001D1B0B /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 03EAA9922CBEEE3A001D1B0B /* CachedAsyncImage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		035878CF2CB8330B00C8A5E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -40,11 +44,6 @@
 			path = FetchTakeHomeTests;
 			sourceTree = "<group>";
 		};
-		035878DB2CB8330B00C8A5E1 /* FetchTakeHomeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchTakeHomeUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03EAA9932CBEEE3A001D1B0B /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,6 @@
 			children = (
 				035878BD2CB8330B00C8A5E1 /* FetchTakeHome */,
 				035878D12CB8330B00C8A5E1 /* FetchTakeHomeTests */,
-				035878DB2CB8330B00C8A5E1 /* FetchTakeHomeUITests */,
 				035878BC2CB8330B00C8A5E1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +111,7 @@
 			);
 			name = FetchTakeHome;
 			packageProductDependencies = (
+				03EAA9922CBEEE3A001D1B0B /* CachedAsyncImage */,
 			);
 			productName = FetchTakeHome;
 			productReference = 035878BB2CB8330B00C8A5E1 /* FetchTakeHome.app */;
@@ -153,9 +153,6 @@
 			dependencies = (
 				035878DA2CB8330B00C8A5E1 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				035878DB2CB8330B00C8A5E1 /* FetchTakeHomeUITests */,
-			);
 			name = FetchTakeHomeUITests;
 			packageProductDependencies = (
 			);
@@ -195,6 +192,9 @@
 			);
 			mainGroup = 035878B22CB8330A00C8A5E1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				03EAA9912CBEEDEE001D1B0B /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 035878BC2CB8330B00C8A5E1 /* Products */;
 			projectDirPath = "";
@@ -406,7 +406,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -414,10 +414,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.haberdashery1234.FetchTakeHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -445,7 +446,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -453,10 +454,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.haberdashery1234.FetchTakeHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -591,6 +593,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03EAA9912CBEEDEE001D1B0B /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03EAA9922CBEEE3A001D1B0B /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03EAA9912CBEEDEE001D1B0B /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 035878B32CB8330A00C8A5E1 /* Project object */;
 }

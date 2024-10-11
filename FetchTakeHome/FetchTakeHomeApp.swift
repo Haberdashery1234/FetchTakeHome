@@ -6,27 +6,20 @@
 //
 
 import SwiftUI
-import SwiftData
+
+let currentEnvironment: EnvironmentType = .development
 
 @main
 struct FetchTakeHomeApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    @StateObject var recipeListViewModel = RecipeListViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipeListView(selectedCuisines: [])
+                .environmentObject(recipeListViewModel)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

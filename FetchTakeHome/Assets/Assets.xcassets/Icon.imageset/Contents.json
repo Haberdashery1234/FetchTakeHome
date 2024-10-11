@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "cooking-icon.png",
       "idiom" : "universal"
     }
   ],
